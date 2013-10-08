@@ -19,16 +19,26 @@ $(document).ready(function(){
 	};
 
 
+	var abc = function opensAlert() {
+		var grab = $(this).val();
+		alert('Here we are: ' + grab );
+	};
+
 	// $('.divButton').on('click', '.btn', function () {
 	// 	var grab = $(this).val();
 	// 	alert('Here we are: ' + grab );
 	// });
 
+	var button1 = $('.callApply1');
+	var button2 = $('.callApply2');
+	var button3 = $('.callApply3');
+	abc.call(button1);
+	abc.call(button2);
+	abc.call(button3);
 
-	sayHello.call(person1);
+	// sayHello.call(person1);
 
-
-	greetOneAnother.apply(person2, personList);
+	// greetOneAnother.apply(person2, personList);
 
 });
 	
