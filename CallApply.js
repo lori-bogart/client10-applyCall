@@ -10,24 +10,22 @@ $(document).ready(function(){
 		alert('Hello, ' + this.firstName);
 	};
 
-	// var getAge = function() {
-	// 	alert('hi there ' + this.age);
-	// };
 
 	var greetOneAnother = function(personA, personB) {
 		alert("{0}, meet {1} and {2}".supplant([this.firstName, personA.firstName, personB.firstName]));
 	};
+	
+///call and apply:
 
+	sayHello.call(person1);
+
+	greetOneAnother.apply(person2, personList);
 
 	var abc = function opensAlert() {
 		var grab = $(this).val();
 		alert('Here we are: ' + grab );
 	};
 
-	// $('.divButton').on('click', '.btn', function () {
-	// 	var grab = $(this).val();
-	// 	alert('Here we are: ' + grab );
-	// });
 
 	var button1 = $('.callApply1');
 	var button2 = $('.callApply2');
@@ -36,9 +34,7 @@ $(document).ready(function(){
 	abc.call(button2);
 	abc.call(button3);
 
-	// sayHello.call(person1);
 
-	// greetOneAnother.apply(person2, personList);
 
 });
 	
